@@ -1,4 +1,4 @@
-# This script detects IBM Tivoli Monitoring Service Console web consoles that are affected by the Authentication Bypass vulnerability
+# This script detects IBM Tivoli Monitoring Service Console that are affected by the Authentication Bypass vulnerability
 
 Before running the script, the list of hosts to be scanned must be specified in hosts .txt in the format IP:PORT
 
