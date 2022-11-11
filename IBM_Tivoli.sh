@@ -10,7 +10,7 @@ function check_set_cookie
     while IFS= read -r line
     do
         url=`echo $line | cut -d' ' -f 1`
-        check_http_vuln=`curl -s -k -v -m 5 --connect-timeout 2 "$url" 2>&1 | grep "Set-Cookie"`
+        check_http_vuln=`curl -s -k -v -m 5 --connect-timeout 5 "$url" 2>&1 | grep "Set-Cookie"`
         if [[ $? -eq 0 ]]
         then
             echo -e "\t${RED}[!] Vulnerable $line ${NC}"
