@@ -37,7 +37,7 @@ do
         if [[ $? -ne 1 ]]
         then
             echo -e "${YELLOW}HTTPS Work - https://$line ${NC}"
-            data_http=`echo -e "$data_http" | sed "s/href=/http:\/\/$line/g" | sed "s/>/ - /g"`
+            data_http=`echo -e "$data_http" | sed "s/href=/https:\/\/$line/g" | sed "s/>/ - /g"`
             check_set_cookie "$data_http"
         else
             # Service disabled
